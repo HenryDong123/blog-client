@@ -9,8 +9,8 @@
       </div>
     </template>
     <template v-if="isLogin">
-      <h1>Let's share</h1>
-      <i class="edit el-icon-edit"></i>
+     <h1> <router-link to="/">Let's share</router-link></h1>
+      <router-link to="/create"><i class="edit el-icon-plus"></i></router-link>
       <div class="user">
         <span style="color: #fff;">{{ user.username }}</span>
         <img class="avatar" :src="user.avatar" :alt="user.username" :title="user.username">
@@ -68,6 +68,9 @@ import {mapGetters, mapActions} from 'vuex'
       font-size: 40px;
       margin: 60px 0 0 0;
       text-transform: uppercase;
+      a{
+        color: white;
+      }
     }
 
     p {
@@ -97,6 +100,9 @@ import {mapGetters, mapActions} from 'vuex'
       font-size: 40px;
       text-transform: uppercase;
       flex: 1;
+      a{
+        color: white;
+      }
     }
 
     .edit {
